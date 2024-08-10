@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import { env } from '$env/dynamic/public';
 	import logo from '$lib/image/logo.svg';
 	import { toggleDarkMode, beDarkMode } from '$lib/helper/darkmode';
 	import { onMount } from 'svelte';
@@ -45,7 +46,7 @@
 				<a href="/" class="no-underline hover:underline">Blogs</a>
 			</li>
 			<li>
-				<a href="https://punkestu.tech" class="no-underline hover:underline">Back to punkestu</a>
+				<a href="{env.PUBLIC_HOME}" class="no-underline hover:underline">Back to punkestu</a>
 			</li>
 		</ul>
 	</nav>
